@@ -1,0 +1,443 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Body Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfaf6; /* Warna krem lembut */
+    color: #3C2A21; /* Warna teks coklat tua */
+}
+
+/* Header */
+header {
+    background: #6F4E37; /* Warna coklat kopi */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: #A67B5B 3px solid;
+    /* Animasi: nama, durasi, timing-function, fill-mode */
+    animation: fadeInDown 0.6s ease-out forwards;
+    opacity: 0; /* Mulai dengan transparan */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+/* Navigation */
+nav ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f4eada; /* Warna lebih terang saat disentuh mouse */
+}
+
+/* Main Content & Sections */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto; /* Membuat konten utama berada di tengah */
+    /* Animasi dengan delay agar muncul setelah header */
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+    opacity: 0; /* Mulai dengan transparan */
+}
+
+section {
+    padding: 25px;
+    margin-bottom: 25px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #6F4E37;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+h2 i {
+    margin-right: 10px;
+}
+
+/* Product Section Layout */
+#produk {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px; /* Jarak antar kartu produk */
+}
+
+/* Product Card Styling */
+.produk {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px; /* Lebar tetap untuk setiap kartu */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produk:hover {
+    transform: translateY(-5px); /* Efek mengangkat saat disentuh mouse */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.produk img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.produk h3 {
+    margin: 15px 0 5px 0;
+}
+
+.produk p {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.produk a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background: #A67B5B; /* Coklat muda */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.produk a:hover {
+    background: #6F4E37; /* Coklat lebih tua saat disentuh mouse */
+}
+
+/* Form Section */
+.form-control {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#form-pesan label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#form-pesan input[type="text"],
+#form-pesan input[type="email"],
+#form-pesan select,
+#form-pesan textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Penting agar padding tidak menambah lebar */
+}
+
+#form-pesan button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #6F4E37;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#form-pesan button:hover {
+    background: #5a3d2b;
+}
+
+/* Icon spacing for buttons and links */
+nav a i, .produk a i, #form-pesan button i {
+    margin-right: 8px;
+}
+
+/* Ordered List Styling */
+#cara-pesan ol {
+    padding-left: 20px;
+}
+
+#cara-pesan li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #3C2A21; /* Coklat paling tua */
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Footer Social Icons */
+.social-icons {
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f4eada;
+}
+
+/* Keyframes untuk Animasi */
+
+/* Animasi untuk Header (turun dari atas) */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animasi untuk Main Content (naik dari bawah) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================= */
+/*          Responsive Design              */
+/* ========================================= */
+
+@media (max-width: 768px) {
+    /* Kurangi ukuran font header agar tidak terlalu besar */
+    header h1 {
+        font-size: 2rem;
+    }
+
+    /* Ubah navigasi menjadi vertikal */
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Sesuaikan padding utama untuk layar kecil */
+    main {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    /* Buat kartu produk memenuhi lebar layar dan menumpuk ke bawah */
+    .produk {
+        width: 90%;
+    }
+}
+
+/* ========================================= */
+/*          Gallery & Lightbox             */
+/* ========================================= */
+
+/* Gallery Container */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Lightbox Modal */
+.lightbox {
+    display: none; /* Sembunyikan secara default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.4s;
+}
+
+.lightbox-content {
+    max-width: 85%;
+    max-height: 80%;
+    animation: zoomIn 0.4s;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+    color: #ccc;
+}
+
+#lightbox-caption {
+    text-align: center;
+    color: #ccc;
+    padding: 15px 0;
+    font-size: 1.2rem;
+}
+
+/* ========================================= */
+/*          Back to Top Button             */
+/* ========================================= */
+
+#back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #6F4E37;
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#back-to-top:hover {
+    background-color: #120801;
+}
+
+/* Style untuk gambar di halaman 'Tentang Kami' */
+.about-us-image {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 200px;
+    width: 100%;
+}
+
+.about-us-image img {
+    width: 100%;
+    height: auto; /* Menjaga rasio aspek */
+    border-radius: 8px;
+}
+
+/* ========================================= */
+/*        Form Validation Styles           */
+/* ========================================= */
+
+.form-control.input-error input,
+.form-control.input-error select,
+.form-control.input-error textarea {
+    border-color: #e74c3c; /* Merah untuk error */
+}
+
+.form-control.input-success input,
+.form-control.input-success select,
+.form-control.input-success textarea {
+    border-color: #2ecc71; /* Hijau untuk sukses */
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 5px;
+    height: 1rem; /* Beri ruang agar layout tidak bergeser */
+    visibility: hidden;
+}
+
+.form-control.input-error .error-message {
+    visibility: visible;
+}
+
+/* ========================================= */
+/*          Google Maps Responsive         */
+/* ========================================= */
+
+.map-container {
+    position: relative;
+    overflow: hidden;
+    /* Rasio 16:9 untuk peta */
+    padding-top: 56.25%;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}

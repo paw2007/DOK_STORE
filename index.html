@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Preconnect untuk mempercepat koneksi ke CDN Font Awesome -->
+	<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="style.css">
+	<title>DKO Coffee Store - Nikmati Kopi Pilihan Terbaik</title>
+</head>
+<body>
+
+	<header>
+		<h1>DKO COFFEE STORE</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html"><i class="fa-solid fa-house"></i> Beranda</a></li>
+				<li><a href="about.html"><i class="fa-solid fa-users"></i> Tentang Kami</a></li>
+				<li><a href="#produk"><i class="fa-solid fa-mug-saucer"></i> Produk</a></li>
+				<li><a href="#cara-pesan"><i class="fa-solid fa-circle-question"></i> Cara Pesan</a></li>
+				<li><a href="#pembayaran"><i class="fa-solid fa-credit-card"></i> Pembayaran</a></li>
+				<li><a href="#lokasi"><i class="fa-solid fa-map-location-dot"></i> Lokasi</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section id="beranda">
+			<h2>Selamat Datang di DKO Coffee Store</h2>
+            <p>DKO Coffee Store adalah surga bagi para pencinta kopi. Kami berdedikasi untuk menyajikan biji kopi berkualitas tinggi dari berbagai penjuru nusantara dengan harga yang bersahabat.</p>
+			<p>Jelajahi koleksi produk terbaik kami dan temukan cita rasa kopi favorit Anda hari ini!</p>
+		</section>
+
+		<section id="produk">
+			<h2>Produk</h2>
+			<figure class="produk">
+				<!-- Menggunakan <picture> untuk format WebP dengan fallback JPEG -->
+				<picture>
+					<source srcset="https://via.placeholder.com/300x200.webp?text=Kopi+Arabica" type="image/webp">
+					<img src="https://via.placeholder.com/300x200.png?text=Kopi+Arabica" alt="Biji Kopi Arabica" loading="lazy" width="300" height="200">
+				</picture>
+				<figcaption>
+					<h3>Kopi Arabica</h3>
+					<p>Rp 150.000 / kg</p>
+					<a href="#form-pesan" class="order-now-btn" data-product-value="arabica"><i class="fa-solid fa-cart-shopping"></i> Pesan Sekarang</a>
+				</figcaption>
+			</figure>
+			<figure class="produk">
+				<picture>
+					<source srcset="https://via.placeholder.com/300x200.webp?text=Kopi+Robusta" type="image/webp">
+					<img src="https://via.placeholder.com/300x200.png?text=Kopi+Robusta" alt="Biji Kopi Robusta" loading="lazy" width="300" height="200">
+				</picture>
+				<figcaption>
+					<h3>Kopi Robusta</h3>
+					<p>Rp 120.000 / kg</p>
+					<a href="#form-pesan" class="order-now-btn" data-product-value="robusta"><i class="fa-solid fa-cart-shopping"></i> Pesan Sekarang</a>
+				</figcaption>
+			</figure>
+			<figure class="produk">
+				<picture>
+					<source srcset="https://via.placeholder.com/300x200.webp?text=Espresso" type="image/webp">
+					<img src="https://via.placeholder.com/300x200.png?text=Espresso" alt="Minuman Espresso" loading="lazy" width="300" height="200">
+				</picture>
+				<figcaption>
+					<h3>Espresso</h3>
+					<p>Rp 25.000</p>
+					<a href="#form-pesan" class="order-now-btn" data-product-value="espresso"><i class="fa-solid fa-cart-shopping"></i> Pesan Sekarang</a>
+				</figcaption>
+			</figure>
+		</section>
+
+		<section id="galeri">
+			<h2>Galeri Kami</h2>
+			<div class="gallery-container">
+				<img src="https://via.placeholder.com/400x300.png?text=Proses+Roasting" alt="Proses Roasting Biji Kopi" class="gallery-item" loading="lazy" width="400" height="300">
+				<img src="https://via.placeholder.com/400x300.png?text=Penyeduhan+Manual" alt="Penyeduhan Kopi Manual" class="gallery-item" loading="lazy" width="400" height="300">
+				<img src="https://via.placeholder.com/400x300.png?text=Latte+Art" alt="Seni Latte di Secangkir Kopi" class="gallery-item" loading="lazy" width="400" height="300">
+				<img src="https://via.placeholder.com/400x300.png?text=Biji+Kopi+Pilihan" alt="Biji Kopi Pilihan dari Petani" class="gallery-item" loading="lazy" width="400" height="300">
+				<img src="https://via.placeholder.com/400x300.png?text=Suasana+Kedai" alt="Suasana Hangat di Kedai Kami" class="gallery-item" loading="lazy" width="400" height="300">
+				<img src="https://via.placeholder.com/400x300.png?text=Kemasan+Produk" alt="Kemasan Produk Kopi" class="gallery-item" loading="lazy" width="400" height="300">
+			</div>
+		</section>
+
+		<section id="form-pesan">
+			<h2>Form Pemesanan</h2>
+			<!-- Tambahkan 'novalidate' untuk menonaktifkan validasi default browser -->
+			<!-- Arahkan action ke endpoint Web3Forms -->
+			<form id="order-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+				<!-- GANTI DENGAN ACCESS KEY ANDA DARI WEB3FORMS -->
+				<input type="hidden" name="access_key" value="GANTI_DENGAN_ACCESS_KEY_ANDA">
+				<input type="hidden" name="subject" value="Pesanan Baru dari Coffee Store">
+				<div class="form-control">
+					<label for="nama">Nama:</label>
+					<input type="text" id="nama" name="nama" required>
+					<small class="error-message"></small>
+				</div>
+				<div class="form-control">
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required>
+					<small class="error-message"></small>
+				</div>
+				<div class="form-control">
+					<label for="produk-pilihan">Pilih Produk:</label>
+					<select id="produk-pilihan" name="produk_pilihan" required>
+						<option value="">--Pilih salah satu--</option>
+						<option value="arabica">Kopi Arabica</option>
+						<option value="robusta">Kopi Robusta</option>
+						<option value="espresso">Espresso</option>
+					</select>
+					<small class="error-message"></small>
+				</div>
+				<div class="form-control">
+					<label for="catatan">Catatan Tambahan:</label>
+					<textarea id="catatan" name="catatan" rows="4" cols="50"></textarea>
+				</div>
+				<div class="form-control">
+					<button type="submit"><i class="fa-solid fa-paper-plane"></i> Kirim Pesanan</button>
+				</div>
+			</form>
+		</section>
+
+		<section id="cara-pesan">
+			<h2>Cara Pesan</h2>
+			<ol>
+				<li>Isi formulir pemesanan di atas.</li>
+				<li>Klik tombol "Kirim Pesanan".</li>
+				<li>Tim kami akan segera menghubungi Anda untuk konfirmasi.</li>
+				<li>Lakukan pembayaran sesuai instruksi.</li>
+				<li>Pesanan Anda akan kami proses.</li>
+			</ol>
+		</section>
+
+		<section id="pembayaran">
+			<h2>Pembayaran</h2>
+			<p>Kami menerima pembayaran melalui transfer bank dan e-wallet (GoPay, OVO, Dana).</p>
+			<p>Informasi rekening akan diberikan setelah Anda melakukan pemesanan.</p>
+		</section>
+
+		<section id="lokasi">
+			<h2><i class="fa-solid fa-map-location-dot"></i> Lokasi Kami</h2>
+			<p>Jl. Kopi Nikmat No. 123, Jakarta, Indonesia</p>
+			<p>Buka Setiap Hari: 08:00 - 22:00</p>
+			<!-- Kontainer untuk peta agar responsif -->
+			<div class="map-container">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322221!2d106.8195613147689!3d-6.194741395514539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f421c9a6a9d1%3A0x2e69f421c9a6a9d1!2sMonumen%20Nasional!5e0!3m2!1sen!2sid!4v1617713312345!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</section>
+	</main>
+
+	<!-- Back to Top Button -->
+	<a href="#" id="back-to-top" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></a>
+
+	<footer>
+		<div class="social-icons">
+			<a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+			<a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+			<a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+		</div>
+		<div class="social-icons">
+	<head></div>
+		<p>&copy; 2024 Coffee Store. All Rights Reserved.</p>
+	</footer>
+
+	<!-- Lightbox Structure -->
+	<div id="lightbox" class="lightbox">
+		<span class="lightbox-close">&times;</span>
+		<img class="lightbox-content" id="lightbox-img">
+		<div id="lightbox-caption"></div>
+	</div>
+
+	<!-- Memuat file JavaScript eksternal dengan 'defer' -->
+	<script src="script.js" defer></script>
+</body>
+</html>
